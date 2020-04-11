@@ -1,0 +1,29 @@
+PCAD Importer Log
+Project : 1N4001.LibPkg
+
+Section : D:\ALÝTÝUM\güç-lab\boost converter\lib\1N4001.lia
+    Section : PCB Library - 1N4001.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token D On Line 133
+            Warning - 1 : Skipping Token attachedSymbol On Line 174
+        EndSection
+
+        Section : Import Messages
+            Warning - 0 : PCAD Pattern Graphics [*DO41-10][Primary] associated with PCAD Component [1N4001] has been renamed to PCB FootPrint [*DO41-10_1N4001(Primary)].
+        EndSection
+    EndSection
+
+    Section : SCH Library - 1N4001.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 88
+            Warning - 1 : Skipping Token layerContents On Line 119
+            Warning - 1 : Skipping Token layerContents On Line 125
+        EndSection
+
+        Section : Generating SCH Library - 1N4001.SchLib
+            Warning - 0 : PCAD Pattern Graphics [*DO41-10][Primary] associated with PCAD Component [1N4001] has been renamed to PCB FootPrint [*DO41-10_1N4001(Primary)].
+        EndSection
+    EndSection
+EndSection

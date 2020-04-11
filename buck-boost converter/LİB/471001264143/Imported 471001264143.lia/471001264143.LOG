@@ -1,0 +1,47 @@
+PCAD Importer Log
+Project : 471001264143.LibPkg
+
+Section : D:\ALÝTÝUM\güç-lab\buck-boost converter\LÝB\471001264143\471001264143.lia
+    Section : PCB Library - 471001264143.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token isVisible On Line 89
+            Warning - 1 : Skipping Token isVisible On Line 94
+            Warning - 1 : Skipping Token isVisible On Line 132
+            Warning - 1 : Skipping Token isVisible On Line 137
+            Warning - 1 : Skipping Token isVisible On Line 175
+            Warning - 1 : Skipping Token isVisible On Line 180
+            Warning - 1 : Skipping Token S On Line 208
+            Warning - 1 : Skipping Token attachedSymbol On Line 248
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - 471001264143.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 88
+            Warning - 1 : Skipping Token layerContents On Line 93
+            Warning - 1 : Skipping Token layerContents On Line 98
+            Warning - 1 : Skipping Token layerContents On Line 106
+            Warning - 1 : Skipping Token layerContents On Line 112
+            Warning - 1 : Skipping Token multiLayer On Line 127
+            Warning - 1 : Skipping Token layerContents On Line 131
+            Warning - 1 : Skipping Token layerContents On Line 136
+            Warning - 1 : Skipping Token layerContents On Line 141
+            Warning - 1 : Skipping Token layerContents On Line 149
+            Warning - 1 : Skipping Token layerContents On Line 155
+            Warning - 1 : Skipping Token multiLayer On Line 170
+            Warning - 1 : Skipping Token layerContents On Line 174
+            Warning - 1 : Skipping Token layerContents On Line 179
+            Warning - 1 : Skipping Token layerContents On Line 184
+            Warning - 1 : Skipping Token layerContents On Line 192
+            Warning - 1 : Skipping Token layerContents On Line 198
+        EndSection
+
+        Section : Generating SCH Library - 471001264143.SchLib
+        EndSection
+    EndSection
+EndSection

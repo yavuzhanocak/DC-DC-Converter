@@ -1,0 +1,14 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartVersion";"1.0.5";"";
+"SUPPLIER";"KEMET";"";
+"TraceParts.PartStatus";"Published";"";
+"DEFAULT_LONG_DESCRIPTION";"Capacitor Polyest 0.01uF 5% 100V Radial";"";
+"RS_STOCK_NUMBER";"8708878";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.InstanceId";"10-07092016-113342C9NBB3XJI7AFNSM8WDAGYTMKQ";"";
+"TraceParts.PartTitle";"Capacitor Polyest 0.01uF 5% 100V Radial";"";
+"MPN_KITMA";"R82EC2100AA50J";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartNumber";"10-07092016-113342";"";
+"TraceParts.PartStatusId";"";"";
+"TraceParts.ClassPath";"RS_COMPONENTS:/F_RS_COMPONENTS/PSB_346947/PSSS_432964/PSS_432965/PSF_432979/10-07092016-113342";"";

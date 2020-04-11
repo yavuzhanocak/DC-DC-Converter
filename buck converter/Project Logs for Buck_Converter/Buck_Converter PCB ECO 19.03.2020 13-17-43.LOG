@@ -1,0 +1,143 @@
+Added Component: Designator=1N4158(1N4158)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B1(button)
+Add component. Clean all parameters for all variants
+Added Component: Designator=E1(IR_2101)
+Add component. Clean all parameters for all variants
+Added Component: Designator=E2(TL_494)
+Add component. Clean all parameters for all variants
+Added Component: Designator=H1(HEADEDR 2)
+Add component. Clean all parameters for all variants
+Added Component: Designator=H2(HEADEDR 2)
+Add component. Clean all parameters for all variants
+Added Component: Designator=K1(klemens(2 pin))
+Add component. Clean all parameters for all variants
+Added Component: Designator=L1(AXIAL-0.8)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Axial Device, Thru-Hole; 2 Leads; 0.8 in Pin Spacing"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "24-Mar-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Set Position"; Value = "0.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=M1(IRF_540)
+Add component. Clean all parameters for all variants
+Added Component: Designator=O1(1N5822)
+Add component. Clean all parameters for all variants
+Added Component: Designator=pot1(VR5)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Variable Resistor, Thru-Hole; 3 Leads"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "VR5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Set Position"; Value = "0.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Sim Note"; Value = "Enter the Resistance value and the set point into parameter fields."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "50K"; VariantName = "[No Variations]"
+Added Component: Designator=pot2(VR5)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Variable Resistor, Thru-Hole; 3 Leads"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "VR5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Set Position"; Value = "0.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Sim Note"; Value = "Enter the Resistance value and the set point into parameter fields."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=RES 1(res)
+Add component. Clean all parameters for all variants
+Added Component: Designator=RES 2(res)
+Add component. Clean all parameters for all variants
+Added Component: Designator=RES 3(res)
+Add component. Clean all parameters for all variants
+Added Component: Designator=taþ direnç(res)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=VCC Pin=1N4158-A
+Added Pin To Net: NetName=VCC Pin=B1-1
+Added Pin To Net: NetName=VCC Pin=E1-1
+Added Pin To Net: NetName=GND Pin=E1-4
+Added Pin To Net: NetName=GND Pin=E2-4
+Added Pin To Net: NetName=GND Pin=E2-7
+Added Pin To Net: NetName=VCC Pin=E2-12
+Added Pin To Net: NetName=GND Pin=E2-13
+Added Pin To Net: NetName=GND Pin=E2-15
+Added Pin To Net: NetName=GND Pin=E2-16
+Added Pin To Net: NetName=GND Pin=H2-2
+Added Pin To Net: NetName=VCC Pin=K1-1
+Added Pin To Net: NetName=GND Pin=K1-2
+Added Pin To Net: NetName=NetC3_2 Pin=L1-2
+Added Pin To Net: NetName=GND Pin=O1-A
+Added Pin To Net: NetName=GND Pin=pot1-1
+Added Pin To Net: NetName=GND Pin=pot2-1
+Added Pin To Net: NetName=Netpot2_3 Pin=pot2-3
+Added Pin To Net: NetName=Netpot2_3 Pin=RES 1-1
+Added Pin To Net: NetName=Netpot2_3 Pin=RES 1-1
+Added Pin To Net: NetName=GND Pin=RES 2-2
+Added Pin To Net: NetName=NetRES 3_1 Pin=RES 3-1
+Added Pin To Net: NetName=NetRES 3_1 Pin=RES 3-1
+Added Pin To Net: NetName=NetC3_2 Pin=taþ direnç-1
+Added Pin To Net: NetName=NetC3_2 Pin=taþ direnç-1
+Added Pin To Net: NetName=GND Pin=taþ direnç-2
+Added Pin To Net: NetName=Net1N4158_C Pin=1N4158-C
+Added Pin To Net: NetName=Net1N4158_C Pin=E1-8
+Added Net: Name=Net1N4158_C
+Added Pin To Net: NetName=NetB1_2 Pin=B1-2
+Added Pin To Net: NetName=NetB1_2 Pin=M1-2
+Added Net: Name=NetB1_2
+Added Pin To Net: NetName=NetC1_2 Pin=E2-5
+Added Net: Name=NetC1_2
+Added Pin To Net: NetName=NetC2_1 Pin=E1-6
+Added Pin To Net: NetName=NetC2_1 Pin=L1-1
+Added Pin To Net: NetName=NetC2_1 Pin=M1-3
+Added Pin To Net: NetName=NetC2_1 Pin=O1-C
+Added Net: Name=NetC2_1
+Added Pin To Net: NetName=NetE1_2 Pin=E1-2
+Added Pin To Net: NetName=NetE1_2 Pin=E1-3
+Added Pin To Net: NetName=NetE1_2 Pin=E2-9
+Added Pin To Net: NetName=NetE1_2 Pin=H1-1
+Added Pin To Net: NetName=NetE1_2 Pin=RES 2-1
+Added Pin To Net: NetName=NetE1_2 Pin=RES 2-1
+Added Net: Name=NetE1_2
+Added Pin To Net: NetName=NetE1_7 Pin=E1-7
+Added Pin To Net: NetName=NetE1_7 Pin=H1-2
+Added Net: Name=NetE1_7
+Added Pin To Net: NetName=NetE2_1 Pin=E2-1
+Added Pin To Net: NetName=NetE2_1 Pin=RES 1-2
+Added Net: Name=NetE2_1
+Added Pin To Net: NetName=NetE2_2 Pin=E2-2
+Added Pin To Net: NetName=NetE2_2 Pin=E2-3
+Added Net: Name=NetE2_2
+Added Pin To Net: NetName=NetE2_6 Pin=E2-6
+Added Pin To Net: NetName=NetE2_6 Pin=pot1-2
+Added Pin To Net: NetName=NetE2_6 Pin=pot1-3
+Added Net: Name=NetE2_6
+Added Pin To Net: NetName=NetE2_8 Pin=E2-8
+Added Pin To Net: NetName=NetE2_8 Pin=E2-14
+Added Pin To Net: NetName=NetE2_8 Pin=pot2-2
+Added Net: Name=NetE2_8
+Added Pin To Net: NetName=NetH2_1 Pin=H2-1
+Added Net: Name=NetH2_1
+Added Pin To Net: NetName=NetM1_1 Pin=M1-1
+Added Pin To Net: NetName=NetM1_1 Pin=RES 3-2
+Added Net: Name=NetM1_1
+Added Member To Class: ClassName=buck_CONVERTER Member=Component 1N4158
+Added Member To Class: ClassName=buck_CONVERTER Member=Component B1 button
+Added Member To Class: ClassName=buck_CONVERTER Member=Component E1 IR_2101
+Added Member To Class: ClassName=buck_CONVERTER Member=Component E2 TL494
+Added Member To Class: ClassName=buck_CONVERTER Member=Component H1 
+Added Member To Class: ClassName=buck_CONVERTER Member=Component H2 
+Added Member To Class: ClassName=buck_CONVERTER Member=Component K1 klemens(2pin)
+Added Member To Class: ClassName=buck_CONVERTER Member=Component L1 1mH,1A
+Added Member To Class: ClassName=buck_CONVERTER Member=Component M1 IRF_540
+Added Member To Class: ClassName=buck_CONVERTER Member=Component O1 1N5822
+Added Member To Class: ClassName=buck_CONVERTER Member=Component pot1 RPot
+Added Member To Class: ClassName=buck_CONVERTER Member=Component pot2 RPot
+Added Member To Class: ClassName=buck_CONVERTER Member=Component RES 1 1 K
+Added Member To Class: ClassName=buck_CONVERTER Member=Component RES 2 1 K
+Added Member To Class: ClassName=buck_CONVERTER Member=Component RES 3 120
+Added Member To Class: ClassName=buck_CONVERTER Member=Component taþ direnç 50 ohm,5W
+Added Room: Name=buck_CONVERTER

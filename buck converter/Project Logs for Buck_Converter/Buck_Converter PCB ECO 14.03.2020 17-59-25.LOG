@@ -1,0 +1,6 @@
+Added Member To Class: ClassName=buck_CONVERTER Member=Component * TL494
+Added Member To Class: ClassName=buck_CONVERTER Member=Component * IR_2101
+Added Member To Class: ClassName=buck_CONVERTER Member=Component * IRF_540
+Added Member To Class: ClassName=buck_CONVERTER Member=Component * 1N4158
+Added Member To Class: ClassName=buck_CONVERTER Member=Component R? RPot
+Added Room: Name=buck_CONVERTER

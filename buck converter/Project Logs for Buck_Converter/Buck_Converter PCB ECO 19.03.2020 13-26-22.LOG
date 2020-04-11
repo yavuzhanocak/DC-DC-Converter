@@ -1,0 +1,29 @@
+Added Component: Designator=*(22uf CAP)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C1(22uf CAP)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C2(22uf CAP)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=*-1
+Added Pin To Net: NetName=GND Pin=*-1
+Added Pin To Net: NetName=GND Pin=*-1
+Added Pin To Net: NetName=GND Pin=*-1
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=Net1N4158_C Pin=C2-2
+Added Pin To Net: NetName=Net*_2 Pin=*-2
+Added Pin To Net: NetName=Net*_2 Pin=L1-2
+Added Pin To Net: NetName=Net*_2 Pin=taþ direnç-1
+Added Pin To Net: NetName=Net*_2 Pin=taþ direnç-1
+Added Net: Name=Net*_2
+Added Member To Class: ClassName=buck_CONVERTER Member=Component * 4.7uf
+Added Member To Class: ClassName=buck_CONVERTER Member=Component C1 0.01uf
+Added Member To Class: ClassName=buck_CONVERTER Member=Component C2 0.22uf
+Added Room: Name=buck_CONVERTER

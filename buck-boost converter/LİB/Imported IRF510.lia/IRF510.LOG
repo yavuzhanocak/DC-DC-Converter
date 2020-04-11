@@ -1,0 +1,50 @@
+PCAD Importer Log
+Project : IRF510.LibPkg
+
+Section : D:\ALÝTÝUM\güç-lab\buck-boost converter\LÝB\IRF510.lia
+    Section : PCB Library - IRF510.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token isVisible On Line 143
+            Warning - 1 : Skipping Token isVisible On Line 188
+            Warning - 1 : Skipping Token isVisible On Line 189
+            Warning - 1 : Skipping Token isVisible On Line 190
+            Warning - 1 : Skipping Token isVisible On Line 213
+            Warning - 1 : Skipping Token isVisible On Line 214
+            Warning - 1 : Skipping Token isVisible On Line 215
+            Warning - 1 : Skipping Token isVisible On Line 297
+            Warning - 1 : Skipping Token isVisible On Line 298
+            Warning - 1 : Skipping Token isVisible On Line 299
+            Warning - 1 : Skipping Token isVisible On Line 331
+            Warning - 1 : Skipping Token isVisible On Line 332
+            Warning - 1 : Skipping Token isVisible On Line 333
+            Warning - 1 : Skipping Token IGFET-EN-GDS On Line 349
+            Warning - 1 : Skipping Token attachedSymbol On Line 407
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - IRF510.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 21
+            Warning - 1 : Skipping Token padStyleDef On Line 32
+            Warning - 1 : Skipping Token padStyleDef On Line 44
+            Warning - 1 : Skipping Token multiLayer On Line 119
+            Warning - 1 : Skipping Token layerContents On Line 125
+            Warning - 1 : Skipping Token layerContents On Line 181
+            Warning - 1 : Skipping Token layerContents On Line 185
+            Warning - 1 : Skipping Token layerContents On Line 210
+            Warning - 1 : Skipping Token layerContents On Line 235
+            Warning - 1 : Skipping Token layerContents On Line 239
+            Warning - 1 : Skipping Token multiLayer On Line 250
+            Warning - 1 : Skipping Token layerContents On Line 255
+            Warning - 1 : Skipping Token layerContents On Line 279
+            Warning - 1 : Skipping Token layerContents On Line 313
+        EndSection
+
+        Section : Generating SCH Library - IRF510.SchLib
+        EndSection
+    EndSection
+EndSection

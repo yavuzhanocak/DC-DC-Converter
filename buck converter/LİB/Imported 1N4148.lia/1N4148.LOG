@@ -1,0 +1,35 @@
+PCAD Importer Log
+Project : 1N4148.LibPkg
+
+Section : D:\ALÝTÝUM\güç-lab\buck converter\LÝB\1N4148.lia
+    Section : PCB Library - 1N4148.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token D On Line 195
+            Warning - 1 : Skipping Token attachedSymbol On Line 239
+        EndSection
+
+        Section : Import Messages
+            Warning - 0 : PCAD Pattern Graphics [*DO35-7][Primary] associated with PCAD Component [1N4148] has been renamed to PCB FootPrint [*DO35-7_1N4148(Primary)].
+        EndSection
+    EndSection
+
+    Section : SCH Library - 1N4148.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 88
+            Warning - 1 : Skipping Token layerContents On Line 123
+            Warning - 1 : Skipping Token layerContents On Line 129
+            Warning - 1 : Skipping Token multiLayer On Line 142
+            Warning - 1 : Skipping Token layerContents On Line 146
+            Warning - 1 : Skipping Token layerContents On Line 181
+            Warning - 1 : Skipping Token layerContents On Line 187
+            Warning - 1 : Skipping Token isVisible On Line 222
+            Warning - 1 : Skipping Token isVisible On Line 223
+        EndSection
+
+        Section : Generating SCH Library - 1N4148.SchLib
+            Warning - 0 : PCAD Pattern Graphics [*DO35-7][Primary] associated with PCAD Component [1N4148] has been renamed to PCB FootPrint [*DO35-7_1N4148(Primary)].
+        EndSection
+    EndSection
+EndSection

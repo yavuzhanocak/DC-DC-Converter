@@ -1,0 +1,16 @@
+﻿"Symbol";"Value";"Unit";
+"REFERENCE";"5642A";"";
+"TraceParts.PartVersion";"1.0.7";"";
+"SUPPLIER";"Apem Components";"";
+"TraceParts.PartStatus";"Published";"";
+"RS_STOCK_NUMBER";"3779664";"";
+"TraceParts.PartLanguage";"en";"";
+"DESIGN";"2P on-(on) std lever toggle switch,3A";"";
+"TraceParts.InstanceId";"10-16112011-143253DY73K7SODXKB8YHE8WXI4GSKQ";"";
+"TraceParts.PartTitle";"2P on-(on) std lever toggle switch,3A";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TIMESTAMP";"11/02/2011 15:10:54";"";
+"REVISION";"A";"";
+"TraceParts.PartNumber";"10-16112011-143253";"";
+"TraceParts.PartStatusId";"";"";
+"TraceParts.ClassPath";"RS_COMPONENTS:/F_RS_COMPONENTS/PSB_346948/PSSS_428047/PSS_428070/PSF_428232/10-16112011-143253";"";

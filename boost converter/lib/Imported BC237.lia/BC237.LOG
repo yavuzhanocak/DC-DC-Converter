@@ -1,0 +1,36 @@
+PCAD Importer Log
+Project : BC237.LibPkg
+
+Section : D:\ALÝTÝUM\güç-lab\boost converter\lib\BC237.lia
+    Section : PCB Library - BC237.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token isVisible On Line 154
+            Warning - 1 : Skipping Token isVisible On Line 155
+            Warning - 1 : Skipping Token isVisible On Line 156
+            Warning - 1 : Skipping Token isVisible On Line 164
+            Warning - 1 : Skipping Token isVisible On Line 165
+            Warning - 1 : Skipping Token isVisible On Line 166
+            Warning - 1 : Skipping Token NPN On Line 170
+            Warning - 1 : Skipping Token attachedSymbol On Line 233
+        EndSection
+
+        Section : Import Messages
+            Warning : Default polygonal pad shape for signal layers has been made multilayer
+            Warning : Default polygonal pad shape for signal layers has been made multilayer
+            Warning : Default polygonal pad shape for signal layers has been made multilayer
+        EndSection
+    EndSection
+
+    Section : SCH Library - BC237.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 134
+            Warning - 1 : Skipping Token layerContents On Line 139
+            Warning - 1 : Skipping Token layerContents On Line 148
+            Warning - 1 : Skipping Token layerContents On Line 158
+        EndSection
+
+        Section : Generating SCH Library - BC237.SchLib
+        EndSection
+    EndSection
+EndSection

@@ -1,0 +1,48 @@
+Removed Pin From Net: NetName=Net*_3 Pin=C2-2
+Removed Pin From Net: NetName=GND Pin=C3-2
+Change Component Footprint: Designator=C1 Old Footprint=RAD-0.3 New Footprint=CAP
+Change Component Footprint: Designator=C2 Old Footprint=RAD-0.3 New Footprint=CAP
+Change Component Footprint: Designator=C3 Old Footprint=RAD-0.3 New Footprint=CAP
+Change Component Comment : Designator=C1 Old Comment=Cap New Comment=0.01
+Change Component Comment : Designator=C2 Old Comment=Cap New Comment=0.22
+Change Component Comment : Designator=C3 Old Comment=Cap New Comment=4.7
+Change Component Designator: OldDesignator=* NewDesignator=1
+Change Component Designator: OldDesignator=* NewDesignator=1
+Change Component Designator: OldDesignator=* NewDesignator=1
+Change Component Designator: OldDesignator=* NewDesignator=1
+Change Component Designator: OldDesignator=* NewDesignator=1N4158
+Change Component Designator: OldDesignator=IR_? NewDesignator=yük 
+Change Component Designator: OldDesignator=R? NewDesignator=pot1
+Change Component Designator: OldDesignator=R? NewDesignator=pot2
+Change component parameters: Designator = "C1"; Footprint = "CAP"; UniqueID = "\YGHYGRXG"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "C2"; Footprint = "CAP"; UniqueID = "\TDFXPTJK"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "C3"; Footprint = "CAP"; UniqueID = "\YJHIUFRE"
+Change component parameters. Clean all parameters for all variants
+Added Pin To Net: NetName=Net*_3 Pin=C2-1
+Added Pin To Net: NetName=Net*_3 Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Change Net Name : Old Net Name=Net*_1 New Net Name=Net1_1
+Change Net Name : Old Net Name=Net*_2 New Net Name=Net1_2
+Change Net Name : Old Net Name=Net*_3 New Net Name=Net1_3
+Change Net Name : Old Net Name=Net*_5 New Net Name=Net1_5
+Change Net Name : Old Net Name=Net*_6 New Net Name=Net1_6
+Change Net Name : Old Net Name=Net*_7 New Net Name=Net1_7
+Change Net Name : Old Net Name=Net*_8 New Net Name=Net1_8
+Change Net Name : Old Net Name=NetIR_?_1 New Net Name=Netyük _1
+Change Net Name : Old Net Name=NetR?_3 New Net Name=Netpot2_3
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=NetC3_2 Pin=L1-2
+Added Pin To Net: NetName=NetC3_2 Pin=taþ direnç-1
+Added Pin To Net: NetName=NetC3_2 Pin=taþ direnç-1
+Added Net: Name=NetC3_2
+Added Member To Class: ClassName=buck_CONVERTER Member=Component 1N4158
+Added Member To Class: ClassName=buck_CONVERTER Member=Component 1 TL494
+Added Member To Class: ClassName=buck_CONVERTER Member=Component 1 IR_2101
+Added Member To Class: ClassName=buck_CONVERTER Member=Component 1 1N5822
+Added Member To Class: ClassName=buck_CONVERTER Member=Component BUTTON1  button
+Added Member To Class: ClassName=buck_CONVERTER Member=Component pot1 RPot
+Added Member To Class: ClassName=buck_CONVERTER Member=Component yük  
+Added Room: Name=buck_CONVERTER

@@ -1,0 +1,471 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD18\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">07.04.2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12:50:43</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc" class="file"><acronym title="D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc">D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">41</td></tr>
+</table>
+</td>
+</table><a name="IDVWKMISONLTVAN5OZC0V1SREQXONM0XR3AQBLEZHHAURIZVDS0Y5N"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEXWFL5TZNI3NNU55ZKO0GQAIAFCOLBJXF0RDTHKU10B1ZB4PTAP">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJPBLPTOS5RVOIFUWDSKX51XG3MMVWSLRA4OPZYOSRL0TQUI2DBWB">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBVRQLIEBPFLBF00RTUOONWALYMVY2Y5WOWSIP1JZDNOWCQXFZPSL">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0WRWUGQVZTTUOJN3ROWDSTZSNCII3JDPDHYMOUEBIOGVVUXFHAWM">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDH0GABYCKLBF4ITE1MYSDQ41RYFNRLBCXEOIYP1JSASICHSNGWUPC">Width Constraint (Min=0.254mm) (Max=0.5mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2NDSQ2I1NLDX0R3JHIGYBGX52PR2HJ10MGVUMP0BMNQJUBTL0E">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDMQXDMTLZPJVWISNMY3R3S5XFYJOBMOC1Z2SU0MN0C3VFNWP1SXXN">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDL4MPFUAKPHKBIAG0D3F20ESJ5FS0EPNIIKVDYRHY3KEH10XKM45L">Hole To Hole Clearance (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">21</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3ZV4IUB4GHHMGFKOTTFPALZ5YERDOT3VYZIQKTMWGYSQMBOESUMK">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQMTIB0H1TGHAH3ZTKXDFBAPUGFJH4MEL0QXEZDE3D3GMNQHLW0GH">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">11</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSRWXP4JDJWDTF4OXCIQCT5FPOLIET34VBQZQQPFIHBLHWGKCRQFE">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0WBIDJ515VDXCSQ1W4MVFLKTGO4G20Z3XWTQKAPTV4VAUZGKMCQF">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWX2UN4OVEAB4IPBE3K4JY5GRNDS44B4S3JDFRBPRPYIMWXJ2GGM">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">41</td>
+</tr>
+</table><br><a name="IDBVRQLIEBPFLBF00RTUOONWALYMVY2Y5WOWSIP1JZDNOWCQXFZPSL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3873mil|Location2.X=3947mil|Location1.Y=2628mil|Location2.Y=2802mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3873mil|Location2.X=3947mil|Location1.Y=2628mil|Location2.Y=2802mil|Absolute=True">Un-Routed Net Constraint: Net NetE1_2 Between Pad E1-3(99.314mm,67.691mm) on Multi-Layer And Pad E1-2(99.314mm,70.231mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDH0GABYCKLBF4ITE1MYSDQ41RYFNRLBCXEOIYP1JSASICHSNGWUPC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Width Constraint (Min=0.254mm) (Max=0.5mm) (Preferred=0.254mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6308.125mil|Location2.X=6321.975mil|Location1.Y=2649.55mil|Location2.Y=2662.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6308.125mil|Location2.X=6321.975mil|Location1.Y=2649.55mil|Location2.Y=2662.937mil|Absolute=True">Width Constraint: Track (160.401mm,86.36mm)(160.401mm,48.641mm) on Bottom Layer Actual Width = 0.2mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4674.563mil|Location2.X=4693.85mil|Location1.Y=1909.563mil|Location2.Y=1920.437mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4674.563mil|Location2.X=4693.85mil|Location1.Y=1909.563mil|Location2.Y=1920.437mil|Absolute=True">Width Constraint: Track (77.343mm,48.641mm)(160.401mm,48.641mm) on Bottom Layer Actual Width = 0.2mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4674.563mil|Location2.X=4693.85mil|Location1.Y=3394.563mil|Location2.Y=3405.437mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4674.563mil|Location2.X=4693.85mil|Location1.Y=3394.563mil|Location2.Y=3405.437mil|Absolute=True">Width Constraint: Track (77.343mm,86.36mm)(160.401mm,86.36mm) on Bottom Layer Actual Width = 0.2mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3038.125mil|Location2.X=3051.975mil|Location1.Y=2649.55mil|Location2.Y=2662.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3038.125mil|Location2.X=3051.975mil|Location1.Y=2649.55mil|Location2.Y=2662.937mil|Absolute=True">Width Constraint: Track (77.343mm,86.36mm)(77.343mm,48.641mm) on Bottom Layer Actual Width = 0.2mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDL4MPFUAKPHKBIAG0D3F20ESJ5FS0EPNIIKVDYRHY3KEH10XKM45L"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole To Hole Clearance (Gap=0.1mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.188mil|Location2.X=3696.812mil|Location1.Y=2165.392mil|Location2.Y=2169.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.188mil|Location2.X=3696.812mil|Location1.Y=2165.392mil|Location2.Y=2169.017mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C1-1(93.853mm,55.047mm) on Multi-Layer And Pad C1-1(93.853mm,55.047mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.188mil|Location2.X=3696.812mil|Location1.Y=2165.392mil|Location2.Y=2169.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.188mil|Location2.X=3696.812mil|Location1.Y=2165.392mil|Location2.Y=2169.017mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C1-1(93.853mm,55.047mm) on Multi-Layer And Pad C1-1(93.853mm,55.047mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.188mil|Location2.X=3696.812mil|Location1.Y=2165.392mil|Location2.Y=2169.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.188mil|Location2.X=3696.812mil|Location1.Y=2165.392mil|Location2.Y=2169.017mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C1-1(93.853mm,55.047mm) on Multi-Layer And Pad C1-1(93.853mm,55.047mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.188mil|Location2.X=3696.812mil|Location1.Y=2165.392mil|Location2.Y=2169.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.188mil|Location2.X=3696.812mil|Location1.Y=2165.392mil|Location2.Y=2169.017mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C1-1(93.853mm,55.047mm) on Multi-Layer And Pad C1-1(93.853mm,55.047mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.188mil|Location2.X=3696.812mil|Location1.Y=2165.392mil|Location2.Y=2169.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.188mil|Location2.X=3696.812mil|Location1.Y=2165.392mil|Location2.Y=2169.017mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C1-1(93.853mm,55.047mm) on Multi-Layer And Pad C1-1(93.853mm,55.047mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.188mil|Location2.X=3696.812mil|Location1.Y=2165.392mil|Location2.Y=2169.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.188mil|Location2.X=3696.812mil|Location1.Y=2165.392mil|Location2.Y=2169.017mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C1-1(93.853mm,55.047mm) on Multi-Layer And Pad C1-1(93.853mm,55.047mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4760.983mil|Location2.X=4764.608mil|Location1.Y=2123.188mil|Location2.Y=2126.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4760.983mil|Location2.X=4764.608mil|Location1.Y=2123.188mil|Location2.Y=2126.812mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C2-1(120.975mm,53.975mm) on Multi-Layer And Pad C2-1(120.975mm,53.975mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4760.983mil|Location2.X=4764.608mil|Location1.Y=2123.188mil|Location2.Y=2126.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4760.983mil|Location2.X=4764.608mil|Location1.Y=2123.188mil|Location2.Y=2126.812mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C2-1(120.975mm,53.975mm) on Multi-Layer And Pad C2-1(120.975mm,53.975mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4760.983mil|Location2.X=4764.608mil|Location1.Y=2123.188mil|Location2.Y=2126.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4760.983mil|Location2.X=4764.608mil|Location1.Y=2123.188mil|Location2.Y=2126.812mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C2-1(120.975mm,53.975mm) on Multi-Layer And Pad C2-1(120.975mm,53.975mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4760.983mil|Location2.X=4764.608mil|Location1.Y=2123.188mil|Location2.Y=2126.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4760.983mil|Location2.X=4764.608mil|Location1.Y=2123.188mil|Location2.Y=2126.812mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C2-1(120.975mm,53.975mm) on Multi-Layer And Pad C2-1(120.975mm,53.975mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4760.983mil|Location2.X=4764.608mil|Location1.Y=2123.188mil|Location2.Y=2126.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4760.983mil|Location2.X=4764.608mil|Location1.Y=2123.188mil|Location2.Y=2126.812mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C2-1(120.975mm,53.975mm) on Multi-Layer And Pad C2-1(120.975mm,53.975mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4760.983mil|Location2.X=4764.608mil|Location1.Y=2123.188mil|Location2.Y=2126.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4760.983mil|Location2.X=4764.608mil|Location1.Y=2123.188mil|Location2.Y=2126.812mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C2-1(120.975mm,53.975mm) on Multi-Layer And Pad C2-1(120.975mm,53.975mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5308.188mil|Location2.X=5311.812mil|Location1.Y=2080.392mil|Location2.Y=2084.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5308.188mil|Location2.X=5311.812mil|Location1.Y=2080.392mil|Location2.Y=2084.017mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C3-1(134.874mm,52.888mm) on Multi-Layer And Pad C3-1(134.874mm,52.888mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5308.188mil|Location2.X=5311.812mil|Location1.Y=2080.392mil|Location2.Y=2084.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5308.188mil|Location2.X=5311.812mil|Location1.Y=2080.392mil|Location2.Y=2084.017mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C3-1(134.874mm,52.888mm) on Multi-Layer And Pad C3-1(134.874mm,52.888mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5308.188mil|Location2.X=5311.812mil|Location1.Y=2080.392mil|Location2.Y=2084.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5308.188mil|Location2.X=5311.812mil|Location1.Y=2080.392mil|Location2.Y=2084.017mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C3-1(134.874mm,52.888mm) on Multi-Layer And Pad C3-1(134.874mm,52.888mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5308.188mil|Location2.X=5311.812mil|Location1.Y=2080.392mil|Location2.Y=2084.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5308.188mil|Location2.X=5311.812mil|Location1.Y=2080.392mil|Location2.Y=2084.017mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C3-1(134.874mm,52.888mm) on Multi-Layer And Pad C3-1(134.874mm,52.888mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5308.188mil|Location2.X=5311.812mil|Location1.Y=2080.392mil|Location2.Y=2084.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5308.188mil|Location2.X=5311.812mil|Location1.Y=2080.392mil|Location2.Y=2084.017mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C3-1(134.874mm,52.888mm) on Multi-Layer And Pad C3-1(134.874mm,52.888mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5308.188mil|Location2.X=5311.812mil|Location1.Y=2080.392mil|Location2.Y=2084.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5308.188mil|Location2.X=5311.812mil|Location1.Y=2080.392mil|Location2.Y=2084.017mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C3-1(134.874mm,52.888mm) on Multi-Layer And Pad C3-1(134.874mm,52.888mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3698.188mil|Location2.X=3701.812mil|Location1.Y=2519.487mil|Location2.Y=2523.111mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3698.188mil|Location2.X=3701.812mil|Location1.Y=2519.487mil|Location2.Y=2523.111mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R 1-1(93.98mm,64.041mm) on Multi-Layer And Pad R 1-1(93.98mm,64.041mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4348.188mil|Location2.X=4351.812mil|Location1.Y=2213.188mil|Location2.Y=2216.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4348.188mil|Location2.X=4351.812mil|Location1.Y=2213.188mil|Location2.Y=2216.812mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R2-1(110.49mm,56.261mm) on Multi-Layer And Pad R2-1(110.49mm,56.261mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5048.188mil|Location2.X=5051.812mil|Location1.Y=2698.188mil|Location2.Y=2701.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5048.188mil|Location2.X=5051.812mil|Location1.Y=2698.188mil|Location2.Y=2701.812mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R3-1(128.27mm,68.58mm) on Multi-Layer And Pad R3-1(128.27mm,68.58mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDQMTIB0H1TGHAH3ZTKXDFBAPUGFJH4MEL0QXEZDE3D3GMNQHLW0GH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4583.375mil|Location2.X=4594.625mil|Location1.Y=2608.35mil|Location2.Y=2619.6mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4583.375mil|Location2.X=4594.625mil|Location1.Y=2608.35mil|Location2.Y=2619.6mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.152mm &lt; 0.254mm) Between Pad E2-1(115.824mm,67.056mm) on Multi-Layer And Track (116.713mm,58.166mm)(116.713mm,68.326mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.152mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4583.375mil|Location2.X=4594.625mil|Location1.Y=2508.35mil|Location2.Y=2519.6mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4583.375mil|Location2.X=4594.625mil|Location1.Y=2508.35mil|Location2.Y=2519.6mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.152mm &lt; 0.254mm) Between Pad E2-2(115.824mm,64.516mm) on Multi-Layer And Track (116.713mm,58.166mm)(116.713mm,68.326mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.152mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4583.375mil|Location2.X=4594.625mil|Location1.Y=2408.35mil|Location2.Y=2419.6mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4583.375mil|Location2.X=4594.625mil|Location1.Y=2408.35mil|Location2.Y=2419.6mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.152mm &lt; 0.254mm) Between Pad E2-3(115.824mm,61.976mm) on Multi-Layer And Track (116.713mm,58.166mm)(116.713mm,68.326mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.152mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4583.375mil|Location2.X=4594.625mil|Location1.Y=2308.35mil|Location2.Y=2319.6mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4583.375mil|Location2.X=4594.625mil|Location1.Y=2308.35mil|Location2.Y=2319.6mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.152mm &lt; 0.254mm) Between Pad E2-4(115.824mm,59.436mm) on Multi-Layer And Track (116.713mm,58.166mm)(116.713mm,68.326mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.152mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4819.168mil|Location2.X=4826.835mil|Location1.Y=2359.753mil|Location2.Y=2367.42mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4819.168mil|Location2.X=4826.835mil|Location1.Y=2359.753mil|Location2.Y=2367.42mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad E2-5(123.444mm,59.436mm) on Multi-Layer And Track (122.555mm,58.166mm)(122.555mm,68.326mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4819.168mil|Location2.X=4826.835mil|Location1.Y=2459.753mil|Location2.Y=2467.42mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4819.168mil|Location2.X=4826.835mil|Location1.Y=2459.753mil|Location2.Y=2467.42mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad E2-6(123.444mm,61.976mm) on Multi-Layer And Track (122.555mm,58.166mm)(122.555mm,68.326mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4819.168mil|Location2.X=4826.835mil|Location1.Y=2559.753mil|Location2.Y=2567.42mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4819.168mil|Location2.X=4826.835mil|Location1.Y=2559.753mil|Location2.Y=2567.42mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad E2-7(123.444mm,64.516mm) on Multi-Layer And Track (122.555mm,58.166mm)(122.555mm,68.326mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4819.168mil|Location2.X=4826.835mil|Location1.Y=2659.753mil|Location2.Y=2667.42mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4819.168mil|Location2.X=4826.835mil|Location1.Y=2659.753mil|Location2.Y=2667.42mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad E2-8(123.444mm,67.056mm) on Multi-Layer And Track (122.555mm,58.166mm)(122.555mm,68.326mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3691.86mil|Location2.X=3704.08mil|Location1.Y=2882.55mil|Location2.Y=2893.8mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3691.86mil|Location2.X=3704.08mil|Location1.Y=2882.55mil|Location2.Y=2893.8mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.173mm &lt; 0.254mm) Between Pad R 1-2(93.98mm,74.041mm) on Multi-Layer And Track (94.019mm,72.454mm)(94.019mm,73.204mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.173mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4341.86mil|Location2.X=4354.08mil|Location1.Y=2576.251mil|Location2.Y=2587.501mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4341.86mil|Location2.X=4354.08mil|Location1.Y=2576.251mil|Location2.Y=2587.501mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.173mm &lt; 0.254mm) Between Pad R2-2(110.49mm,66.261mm) on Multi-Layer And Track (110.529mm,64.674mm)(110.529mm,65.424mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.173mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5413.135mil|Location2.X=5424.385mil|Location1.Y=2692.84mil|Location2.Y=2704.09mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5413.135mil|Location2.X=5424.385mil|Location1.Y=2692.84mil|Location2.Y=2704.09mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.207mm &lt; 0.254mm) Between Pad R3-2(138.27mm,68.58mm) on Multi-Layer And Track (136.683mm,68.541mm)(137.433mm,68.541mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.207mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDSRWXP4JDJWDTF4OXCIQCT5FPOLIET34VBQZQQPFIHBLHWGKCRQFE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3894.372mil|Location2.X=3905.622mil|Location1.Y=3068.952mil|Location2.Y=3080.202mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3894.372mil|Location2.X=3905.622mil|Location1.Y=3068.952mil|Location2.Y=3080.202mil|Absolute=True">Silk To Silk Clearance Constraint: (0.233mm &lt; 0.254mm) Between Text "12 v" (98.806mm,76.327mm) on Top Overlay And Track (96.938mm,78.461mm)(105.913mm,78.461mm) on Top Overlay Silk Text to Silk Clearance [0.233mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5195.458mil|Location2.X=5203.125mil|Location1.Y=2339.167mil|Location2.Y=2346.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5195.458mil|Location2.X=5203.125mil|Location1.Y=2339.167mil|Location2.Y=2346.833mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "C3" (132.062mm,58.489mm) on Top Overlay And Track (127.305mm,59.512mm)(137.871mm,59.512mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4508.375mil|Location2.X=4519.625mil|Location1.Y=2786.865mil|Location2.Y=2798.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4508.375mil|Location2.X=4519.625mil|Location1.Y=2786.865mil|Location2.Y=2798.115mil|Absolute=True">Silk To Silk Clearance Constraint: (0.229mm &lt; 0.254mm) Between Text "E2" (114.656mm,69.164mm) on Top Overlay And Track (114.427mm,71.12mm)(118.491mm,71.12mm) on Top Overlay Silk Text to Silk Clearance [0.229mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDWX2UN4OVEAB4IPBE3K4JY5GRNDS44B4S3JDFRBPRPYIMWXJ2GGM"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\AL%C4%B0T%C4%B0UM\g%C3%BC%C3%A7-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5939mil|Location2.X=5941mil|Location1.Y=2884mil|Location2.Y=2886mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\ALÝTÝUM\güç-lab\buck-boost converter\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5939mil|Location2.X=5941mil|Location1.Y=2884mil|Location2.Y=2886mil|Absolute=True">Height Constraint: Small Component I1-inductor (150.876mm,73.279mm) on Top Layer Actual Height = 42.838mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
